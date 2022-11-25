@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <main>
+        <!--? Hero Start -->
+        <div class="slider-area2 section-bg2 hero-overly" data-background="{% static 'assets/img/hero/hero2.png' %}">
+            <div class="slider-height2 d-flex align-items-center">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="hero-cap hero-cap2">
+                                <h2>Our Customer Record </h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Hero End -->
+    
+                <div class="row">
+                    <div class="col-12">
+                        <h2 class="contact-title" style="text-align: center; font-family: 'Times New Roman', Times, serif;">Custormer Record</h2>
+                    </div>
+                   
+                </div>
+            </div>
+        <style>
+            table {
+              font-family: arial, sans-serif;
+              border-collapse: collapse;
+              width: 100%;
+            }
+            
+            td, th {
+              border: 1px solid #dddddd;
+              text-align: left;
+              padding: 8px;
+            }
+            
+            tr:nth-child(even) {
+              background-color: #dddddd;
+            }
+            </style>
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Address</th>
+                </tr>
+            {% for x in record %}
+               <tr>
+                <td>{{x.name}}</td>
+                <td>{{x.address}}</td>
+                </tr>   
+            {% endfor %}
+        </table>
+        <!-- Contact Area End -->
+    </main>
+{% endblock content %}
