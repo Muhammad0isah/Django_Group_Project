@@ -1,1 +1,1 @@
-web: gunicorn LaundryServices.wsgi --log-file-
+web: gunicorn LaundryServices.wsgi --log-file -
